@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "mcd-token",
+      "description": "麦当劳 MCP Token",
+      "password": true
+    }
+  ],
+  "servers": {
+    "mcd-mcp": {
+      "type": "http",
+      "url": "https://mcp.mcd.cn/mcp-servers/mcd-mcp",
+      "headers": { "Authorization": "Bearer ${input:mcd-token}" }
+    }
+  }
+}
